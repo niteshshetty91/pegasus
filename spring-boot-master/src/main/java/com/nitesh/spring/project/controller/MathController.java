@@ -82,21 +82,15 @@ public class MathController {
 
 	//////////////////////////  Demostrate the use of checkbox /////////////////////////////////////////////
 
-	@RequestMapping("/testInput")
-	public String expectForm(Model model,@ModelAttribute Expression expression) {
+	@RequestMapping("/testForm")
+	public String expectForm(Model model) {
 
+		Expression expression = new Expression();
+		expression.setExpressionContent("Nitesh");
+		model.addAttribute("expression", expression);
 
-		return "";
+		return "input";
 	}	
-
-	@RequestMapping("/submitInput")
-	public String submitInput(Model model,@ModelAttribute Expression expression) {
-
-
-		return "";
-	}	
-
-
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 

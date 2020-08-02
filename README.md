@@ -1,2 +1,0 @@
-# pegasus
-Code Test

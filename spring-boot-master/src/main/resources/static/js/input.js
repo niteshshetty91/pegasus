@@ -1,29 +1,31 @@
 $( document ).ready(function() {
-	
-	alert("Welcome to Mathematics Calculator");
 
-	$('#errMsg').text("");
-	$('#errMsg').hide("");
+	$('#button').click(function(e){
+		e.preventDefault() 
+		var hiddenValue = $('#expressionContent').val();
 
-	$('#form').submit(function(){
+		alert("The hidden value is "+hiddenValue);
 
+	});
 
-		if($('#expressionQuestion').val()==''){
-			$('#errMsg').show();
-			$('#errMsg').text("Please enter the expression");
-			
+	$('#checkbox').click(function(){
 
-			return false;
+		if($(this).is(':checked')){
+
+			alert("CheckBox is checked");
 
 		}else{
 
-			$('#errMsg').text("");
-			$('#errMsg').hide("");
-			return true;
+			alert("CheckBox is unchecked");
 
 		}
 
 
 	});
+
+
+
+
+
 
 });
